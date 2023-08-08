@@ -1,4 +1,7 @@
 const countriesElem=document.querySelector(".countries");
+const dropdrown=document.querySelector(".dropdrown");
+const dropElem=document.querySelector(".drop");
+
 async function getCountry(){
     const url=await fetch("https://restcountries.com/v3.1/all");
     const res=await url.json(); 
@@ -23,3 +26,7 @@ function showCountry(data){
 </div>`;
 countriesElem.appendChild(country)
 }
+dropdrown.addEventListener("click",()=>{
+dropElem.classList("showdropdown")
+console.log("hihi");
+})
