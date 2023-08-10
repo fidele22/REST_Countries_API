@@ -27,11 +27,12 @@ function showCountry(data){
 </div>`;
 countriesElem.appendChild(country)
 }
-dropDown.addEventListener("click",()=>{
-dropElem.classList.toggle("showdropdown")
-console.log("hello");
+dropDown.addEventListener("click", () => {
+    
+      dropElem.classList.toggle("showdropdown");
+      console.log("hello");
+    
 })
-
 search.addEventListener("input", () => {
     console.log(search.value.toLowerCase());
     const countryNames = document.querySelectorAll(".countryName"); // Select elements with class "countryName"
