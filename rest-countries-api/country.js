@@ -53,7 +53,7 @@ search.addEventListener("input", () => {
 const countryModal = document.querySelector(".countryModal")
 function showCountryData(data) {
     countryModal.classList.toggle("show")
-    countryModal.innerHTML = `<button class="back">Back</button>
+    countryModal.innerHTML = `<button class="back">Click here to go Back</button>
     <div class="modal">
       <div class="leftModal">
         <img src="${data.flags['png']}" alt="">
