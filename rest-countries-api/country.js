@@ -1,6 +1,7 @@
 const countriesElem=document.querySelector(".countries");
-const dropdrown=document.querySelector(".dropdrown");
+const dropDown=document.querySelector(".dropDown");
 const dropElem=document.querySelector(".drop");
+const search=document.querySelector(".search");
 
 async function getCountry(){
     const url=await fetch("https://restcountries.com/v3.1/all");
@@ -19,14 +20,27 @@ function showCountry(data){
     <img src="${data.flags['png']}" alt="">
 </div>
 <div class="country-info">
-    <h5>${data.name['common']}</h5>
+    <h5 class="countryName">${data.name['common']}</h5>
     <p><strong>Population:</strong>${data.population}</p>
     <p><strong>Region:</strong>${data.region}</p>
     <p><strong>Capital:</strong>${data.capital}</p>
 </div>`;
 countriesElem.appendChild(country)
 }
-dropdrown.addEventListener("click",()=>{
-dropElem.classList("showdropdown")
-console.log("hihi");
+dropDown.addEventListener("click",()=>{
+dropElem.classList.toggle("showdropdown")
+console.log("hello");
 })
+
+search.addEventListener("input", () => {
+    console.log(search.value.toLowerCase());
+    const countryNames = document.querySelectorAll(".countryName"); // Select elements with class "countryName"
+    
+    countryNames.forEach(elem => {
+        if (elem.innerText.toLowerCase().includes(search.value.toLowerCase())) {
+            elem.parentElement.parentElement.style.display = "grid";
+        } else {
+            elem.parentElement.parentElement.style.display = "none";
+        }
+    });
+});
