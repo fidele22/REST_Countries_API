@@ -58,17 +58,17 @@ function showCountryData(data) {
       <div class="leftModal">
         <img src="${data.flags['png']}" alt="">
       </div>
-      <div class="rightModal">
+      <div class="countryDetails">
         <h1>${data.name['common']}</h1>
         <div class="innerLeft">
-        <p><strong>Population:</strong>${data.population}</p>
-        <p><strong>Region:</strong>${data.region}</p>
-        <p><strong>Capital:</strong>${data.capital}</p>
+        <p><strong>Population: </strong>${data.population}</p>
+        <p><strong>Region: </strong>${data.region}</p>
+        <p><strong>Capital: </strong>${data.capital}</p>
+        <div class="innerRight">
+        <p><strong>independent: </strong>${data.independent}</p>
+        <p><strong>languages: </strong>${data.languages['eng'||'eng']}</p>
+        <p><strong>area: </strong>${data.area}</p>
         </div>
-        <div class="innerLeft">
-        <p><strong>Population:</strong>${data.population}</p>
-        <p><strong>Region:</strong>${data.region}</p>
-        <p><strong>Capital:</strong>${data.capital}</p>
         </div>
       </div>
     </div>`;

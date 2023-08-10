@@ -131,3 +131,19 @@ right: 1rem;
 .show{
     display: none;
 }
+.countryModal h1{
+color: blue;
+font-weight: 700;
+font-size: 50px;
+}
+.countryDetails p{
+    font-size: 25px;
+    text-align-last: left;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 4rem;
+}
+.countryDetails{
+    background-color: white;
+    box-shadow:0 0 5px  rgba(0,0,0,0.3);
+}
