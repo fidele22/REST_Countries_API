@@ -117,3 +117,17 @@ right: 1rem;
 .showdropdown{
   display: none;  
 }
+/******************************************************/
+.countryModal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 30px;
+    text-align: center;
+}
+.show{
+    display: none;
+}
